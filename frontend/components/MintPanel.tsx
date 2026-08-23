@@ -518,7 +518,7 @@ export function MintPanel({ onMinted }: { onMinted: () => void }) {
             <div className="mt-3 space-y-1 text-[11px] font-black">
               <p>
                 <a
-                  className="glass-dark px-1.5 py-0.5 text-orange underline decoration-2 underline-offset-2 hover:text-paper"
+                  className="glass-dark px-1.5 py-0.5 text-lime underline decoration-2 underline-offset-2 hover:text-paper"
                   href={`${EXPLORER_BASE}/tx/${result.txHash}`}
                   target="_blank"
                   rel="noreferrer"
@@ -528,7 +528,7 @@ export function MintPanel({ onMinted }: { onMinted: () => void }) {
               </p>
               <p>
                 <a
-                  className="glass-dark px-1.5 py-0.5 text-orange underline decoration-2 underline-offset-2 hover:text-paper"
+                  className="glass-dark px-1.5 py-0.5 text-lime underline decoration-2 underline-offset-2 hover:text-paper"
                   href={ipfsToHttp(result.metadataUri)}
                   target="_blank"
                   rel="noreferrer"
@@ -538,7 +538,7 @@ export function MintPanel({ onMinted }: { onMinted: () => void }) {
               </p>
               <p>
                 <a
-                  className="glass-dark px-1.5 py-0.5 text-orange underline decoration-2 underline-offset-2 hover:text-paper"
+                  className="glass-dark px-1.5 py-0.5 text-lime underline decoration-2 underline-offset-2 hover:text-paper"
                   href={ipfsToHttp(result.imageUri)}
                   target="_blank"
                   rel="noreferrer"
