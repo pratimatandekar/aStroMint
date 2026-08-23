@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============ GLASSMORPHISM BASE (sharp-edged) ============ */
+
+* {
+  border-radius: 0 !important; /* zero border-radius — edgy stays edgy */
+}
+
+html {
+  background: #070710;
+}
+
+body {
+  color: #ffffff;
+  background: #070710;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas,
+    "Liberation Mono", monospace;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ambient neon blobs behind the glass */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 55vw;
+  height: 55vw;
+  filter: blur(120px);
+  opacity: 0.32;
+  pointer-events: none;
+}
+
+body::before {
+  top: -18vw;
+  left: -12vw;
+  background: radial-gradient(
+    circle,
+    #8b5cf6 0%,
+    #ff6ec7 55%,
+    transparent 75%
+  );
+  animation: float 14s ease-in-out infinite;
+}
+
+body::after {
+  bottom: -20vw;
+  right: -14vw;
+  background: radial-gradient(circle, #22d3ee 0%, #8b5cf6 60%, transparent 78%);
+  animation: float 18s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+}
+
+/* ============ GLASS UTILITIES ============ */
+
+.glass {
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass-dark {
+  background: rgba(7, 7, 16, 0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::selection {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+/* slim square scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.55);
+  border: 2px solid #070710;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 110, 199, 0.65);
+}
+
+/* stellar-wallets-kit modal — keep it sharp */
+:root {
+  --swk-modal-radius: 0 !important;
+  --swk-button-radius: 0 !important;
+}
