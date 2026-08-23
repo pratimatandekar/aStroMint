@@ -1,5 +1,11 @@
 # ✦ aStroMint
 
+🌐 **Live Demo → [a-stro-mint-dapp.vercel.app](https://a-stro-mint-dapp.vercel.app/)**
+
+Developed by [@pratimatandekar](https://x.com/pratimatandekar)
+
+---
+
 **Mint simple NFTs with metadata and live status — on Stellar Soroban.**
 
 Upload artwork → pin to IPFS via Pinata → mint on a Soroban smart contract →
