@@ -2,6 +2,8 @@
 
 🌐 **Live Demo → [a-stro-mint-dapp.vercel.app](https://a-stro-mint-dapp.vercel.app/)**
 
+🔭 **Smart Contract (Stellar Testnet) → [stellar.expert ↗](https://stellar.expert/explorer/testnet/contract/CAMWUKLKBWBA73C6J2OOEPCQS66Z7NYFOU4SHFDNNYAPWFKKTD3TRB3Y)**
+
 Developed by [@pratimatandekar](https://x.com/pratimatandekar)
 
 ---
