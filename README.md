@@ -21,6 +21,7 @@
 | 🔗 **Live link** | [a-stro-mint-dapp.vercel.app](https://a-stro-mint-dapp.vercel.app/) |
 | 📜 **Stellar smart contract (Testnet)** | [`CAMWUKLKBWBA73C6J2OOEPCQS66Z7NYFOU4SHFDNNYAPWFKKTD3TRB3Y`](https://stellar.expert/explorer/testnet/contract/CAMWUKLKBWBA73C6J2OOEPCQS66Z7NYFOU4SHFDNNYAPWFKKTD3TRB3Y) |
 | 👩‍💻 **Developed by** | [@pratimatandekar](https://x.com/pratimatandekar) |
+| 🎬 **Demo Video** | [Watch on Google Drive](https://drive.google.com/file/d/1c-FIXtyFO7bawR_7rD_ooCpLqnZ5rdan/view?usp=sharing) |
 
 ---
 
