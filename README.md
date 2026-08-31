@@ -1,5 +1,7 @@
 # ✦ aStroMint
 
+![CI — Lint & Build](https://github.com/pratimatandekar/aStroMint/actions/workflows/ci.yml/badge.svg)
+
 🌐 **Live Demo → [a-stro-mint-dapp.vercel.app](https://a-stro-mint-dapp.vercel.app/)**
 
 🔭 **Smart Contract (Stellar Testnet) → [stellar.expert ↗](https://stellar.expert/explorer/testnet/contract/CAMWUKLKBWBA73C6J2OOEPCQS66Z7NYFOU4SHFDNNYAPWFKKTD3TRB3Y)**
@@ -182,4 +184,37 @@ verifiable, decentralized.
   attributes capped at 20.
 - Token #1 (`GENESIS TEST`) was minted during deployment verification by the
   deployer account.
-# aStroMint
+
+---
+
+## ⚙️ CI / CD
+
+Every push and pull request to `main` triggers the **CI — Lint & Build** workflow defined in `.github/workflows/ci.yml`.
+
+### What the pipeline does
+
+| Step | Command | Purpose |
+|------|---------|---------|
+| Install deps | `bun install --frozen-lockfile` | Reproducible install using the lockfile |
+| Lint | `bun run lint` | Runs `next lint` with ESLint + TypeScript rules |
+| Build | `bun run build` | Full Next.js 14 production build — catches type errors and broken imports |
+
+### What was fixed to make CI green
+
+- Added `eslint`, `eslint-config-next@14.2.32`, `@typescript-eslint/eslint-plugin@7`, `@typescript-eslint/parser@7` as dev dependencies — pinned to versions compatible with **Next.js 14** (avoids the ESLint 10 / eslint-config-next 16 peer mismatch).
+- Created `.eslintrc.json` extending `next/core-web-vitals` and `next/typescript` with relaxed rules for `@typescript-eslint/no-unused-vars` and `react/no-unescaped-entities` that would otherwise produce noise in a dApp codebase.
+- Verified `bun run lint` exits with **zero warnings or errors**.
+- Verified `bun run build` compiles all 5 routes successfully with no type errors.
+
+### GitHub Actions secrets needed for full integration
+
+For the Pinata IPFS upload route to be exercised during CI, add these in **Settings → Secrets → Actions**:
+
+```
+PINATA_API_KEY
+PINATA_API_SECRET
+PINATA_JWT
+NEXT_PUBLIC_CONTRACT_ID
+```
+
+Without them the build still passes — the API route is server-side only and not statically analysed at build time.
